@@ -1,0 +1,17 @@
+spring:
+  rabbitmq:
+    host: b-0b6a5363-dd88-40f8-893c-e934e1a42b07.mq.ap-northeast-2.amazonaws.com
+    port: 5671
+    username: ENC(vBanzYonz0PHyjkKmMK2fQ==)
+    password: ENC(9/RxgizT7QAr+MNqTeM2zXAwlAK1YR89)
+    virtual-host: /
+    ssl:
+      enabled: true
+
+  listener:
+    simple:
+      acknowledge-mode: manual
+
+  config:
+    activate:
+      on-profile: "rabbit"
