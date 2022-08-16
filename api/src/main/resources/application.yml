@@ -1,0 +1,13 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active:
+     - "db"
+     - "rabbit"
+
+server:
+  port: 7788
+  tomcat:
+    connection-timeout: 30000
+    accept-count: 50
