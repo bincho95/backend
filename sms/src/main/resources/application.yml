@@ -1,0 +1,13 @@
+naver:
+  sms:
+    serviceId: ncp:sms:kr:290771747689:verification
+    accessKey: 9iIlqOnTgnhg7Gr9agTj
+    secretKey: VAWiSu4c9HvRD0MdrLvgDe7aeCwxvfO0VKAX67rK
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active:
+      - "db"
+      - "rabbit"
