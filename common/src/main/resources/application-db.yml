@@ -1,0 +1,18 @@
+
+spring:
+  data:
+    maria:
+      jdbc-url: jdbc:mariadb://database.cefxkrqwctgp.ap-northeast-2.rds.amazonaws.com:3306/ably
+      url: jdbc:mariadb://database.cefxkrqwctgp.ap-northeast-2.rds.amazonaws.com:3306/ably
+      username: ENC(EREqNXoEMdQyxCQT7nAUvg==)
+      password: ENC(3SPr6vkWtcIyLR8kjRR1Yzz1W2JFevR9)
+
+    jpa:
+      open-in-view: false
+      generate-ddl: true
+      show-sql: true
+      hibernate:
+        ddl-auto: none
+  config:
+    activate:
+      on-profile: "db"
