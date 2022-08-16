@@ -7,7 +7,6 @@ import api.service.VerificationSerivce;
 import common.maria.entity.VerifyCode;
 import common.rabbit.publisher.SmsMQPublisher;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

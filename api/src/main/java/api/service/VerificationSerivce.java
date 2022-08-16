@@ -9,12 +9,9 @@ import common.rabbit.model.MessageDto;
 import common.rabbit.publisher.SmsMQPublisher;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
@@ -40,7 +37,7 @@ public class VerificationSerivce {
         return  verifyCode;
     }
 
-    public DefaultResponse checkVerification(CheckVerification checkVerification) throws JSONException {
+    public DefaultResponse checkVerification(CheckVerification checkVerification) {
         VerifyCode verifyCode = verifyCodeRepository.findBySessionIdAndMobileAndCodeAndExpiredDateLessThanEqual(
                 checkVerification.getSessionId(),
                 checkVerification.getMobile(),

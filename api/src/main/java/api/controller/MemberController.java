@@ -6,7 +6,6 @@ import api.model.DefaultResponse;
 import api.service.MemberSerivce;
 import common.maria.entity.Member;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -56,7 +55,7 @@ public class MemberController {
     }
 
     @GetMapping("/change-password/{mobile}")
-    public ResponseEntity<ChagePasswordResponse> changePassword(@PathVariable String mobile) throws JSONException {
+    public ResponseEntity<ChagePasswordResponse> changePassword(@PathVariable String mobile) {
 
         try {
             ChagePasswordResponse chagePasswordResponse = memberSerivce.changePassword(mobile);
