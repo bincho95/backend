@@ -130,7 +130,7 @@ GET : /member/info/{identifier}
 
 | parameter | type   | description                   |
 | --------- | ------ | ----------------------------- |
-| sessionId | String | 인증 시도하려는 Session Id    |
+| session_id | String | 인증 시도하려는 Session Id    |
 | mobile    | String | 인증 시도하려는 Mobile Number |
 
 
@@ -141,7 +141,7 @@ GET : /member/info/{identifier}
 
 | parameter | type   | description                   |
 | --------- | ------ | ----------------------------- |
-| sessionId | String | 인증 시도하려는 Session Id    |
+| session_id | String | 인증 시도하려는 Session Id    |
 | mobile    | String | 인증 시도하려는 Mobile Number |
 | code      | String | 입력받은 인증 번호            |
 
