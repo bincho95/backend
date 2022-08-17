@@ -1,6 +1,6 @@
 package api.controller;
 
-import api.model.ChagePasswordResponse;
+import api.model.ChangePasswordResponse;
 import api.model.CheckPassword;
 import api.model.DefaultResponse;
 import api.service.MemberSerivce;
@@ -55,10 +55,10 @@ public class MemberController {
     }
 
     @GetMapping("/change-password/{mobile}")
-    public ResponseEntity<ChagePasswordResponse> changePassword(@PathVariable String mobile) {
+    public ResponseEntity<ChangePasswordResponse> changePassword(@PathVariable String mobile) {
 
         try {
-            ChagePasswordResponse chagePasswordResponse = memberSerivce.changePassword(mobile);
+            ChangePasswordResponse chagePasswordResponse = memberSerivce.changePassword(mobile);
             return new ResponseEntity<>(chagePasswordResponse, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);

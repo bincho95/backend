@@ -1,6 +1,6 @@
 package api.service;
 
-import api.model.ChagePasswordResponse;
+import api.model.ChangePasswordResponse;
 import api.model.CheckPassword;
 import api.model.DefaultResponse;
 import common.maria.entity.Member;
@@ -61,11 +61,11 @@ public class MemberSerivce {
         return memberRepository.findById(id).get();
     }
 
-    public ChagePasswordResponse changePassword(String mobile) {
+    public ChangePasswordResponse changePassword(String mobile) {
         String tempPassword = RandomStringUtils.randomAlphanumeric(15);
         Member member = memberRepository.findByMobile(mobile);
         member.setPassword(passwordEncoder.encode(tempPassword));
-        return new ChagePasswordResponse(tempPassword);
+        return new ChangePasswordResponse(tempPassword);
     }
 
     public DefaultResponse checkPassword (CheckPassword checkPassword){
