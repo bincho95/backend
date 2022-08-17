@@ -23,7 +23,7 @@
 
 - Naver Cloud Service Sens
 
-##### 배포환경
+##### 배포
 
 - AWS EC2 Ubuntu
 
@@ -41,7 +41,29 @@ DataBase 와 RabbitMQ의 설정과 커넥션 저보를 담고있는 Common Modul
 
 테스트는 로컬로도 가능 하나 AWS EC2 에 배포 및 실행 시켜 두었기 때문에 (http://3.39.88.21:7788/ ) 를 통해서도 테스트가 가능합니다.
 
+### 스키마 구성
+```
+CREATE TABLE `member` (
+                          `member_id` int NOT NULL AUTO_INCREMENT,
+                          `email` varchar(100) DEFAULT NULL,
+                          `mobile` varchar(15) DEFAULT NULL,
+                          `nickname` varchar(30) DEFAULT NULL,
+                          `name` varchar(10) DEFAULT NULL,
+                          `password` varchar(100) DEFAULT NULL,
+                          PRIMARY KEY (`member_id`),
+                          UNIQUE KEY `email` (`email`),
+                          UNIQUE KEY `mobile` (`mobile`),
+                          UNIQUE KEY `nickname` (`nickname`)
+);
 
+CREATE TABLE `verifycode` (
+                              `session_id` varchar(100) NOT NULL,
+                              `mobile` varchar(15) NOT NULL,
+                              `code` varchar(6) DEFAULT NULL,
+                              `expired_date` date DEFAULT NULL,
+                              PRIMARY KEY (`session_id`,`mobile`)
+);
+```
 
 ## API
 
