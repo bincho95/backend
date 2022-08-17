@@ -37,7 +37,7 @@
 
 DataBase 와 RabbitMQ의 설정과 커넥션 저보를 담고있는 Common Module 과 Api 를 처리하는 Api Module , Sms 발송을 담당 하는 Sms Module 이렇게 멀티모듈 프로잭트로 구성되어 있습니다.
 
-로컬 실행시 yml 파일 속에 커넥션 계정 정보들이 Jasypt 을통해 암호화가 되어 있기 때문에 gradle 빌드 후 실행시에 VM OPTION(-Djasypt.encryptor.password=1234)을 넣어서 실행 시켜줘야 합니다 (ex java -jar 파라미터 -Djasypt.encryptor.password=1234  **.jar )
+로컬 실행시 yml 파일 속에 커넥션 계정 정보들이 Jasypt 을통해 암호화가 되어 있기 때문에 gradle 빌드 후 실행시에 VM OPTION(-Djasypt.encryptor.password=1234)을 넣어서 실행 시켜줘야 합니다 (ex java -jar -Djasypt.encryptor.password=1234  **.jar )
 
 테스트는 로컬로도 가능 하나 AWS EC2 에 배포 및 실행 시켜 두었기 때문에 (http://3.39.88.21:7788/ ) 를 통해서도 테스트가 가능합니다.
 
